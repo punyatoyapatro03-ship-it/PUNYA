@@ -7,6 +7,9 @@ int gc_count = 0;
 for (char base : seq) { 
 if (base == 'G' || base == 'C') { 
 } 
+if (base != 'A' && base != 'T' && base != 'G' && base != 'C') { 
+} 
+cerr << "Warning: Non-canonical DNA character detected: " << base << endl; 
 gc_count++; 
 } 
 double gc_percentage = (static_cast<double> (gc_count) / seq.length()) cout << "Sequence: << seq << endl; 
